@@ -134,10 +134,10 @@ const dbNewTopologyFamily6 = async () => connectToDB({ useUnifiedTopology: true,
 const dbNewTopologyFamilyN = async () => connectToDB({ useUnifiedTopology: true });
 
 const cases = new Set([
-//   {
-//     name: 'lookup()',
-//     fn: lookup0
-//   },
+  {
+    name: 'lookup()',
+    fn: lookup0
+  },
   {
     name: 'lookup(4)',
     fn: lookup4
@@ -150,126 +150,126 @@ const cases = new Set([
     name: 'lookup(6) -> lookup(4)',
     fn: fallback([lookup6, lookup4])
   },
-//   {
-//     name: 'lookup(6) -> lookup(0)',
-//     fn: fallback([lookup6, lookup0])
-//   },
-//   {
-//     name: 'lookup(6) -> lookup(4) -> lookup(0)',
-//     fn: fallback([lookup6, lookup4, lookup0])
-//   },
-//   {
-//     name: 'resolve',
-//     fn: resolve0
-//   },
-//   {
-//     name: 'resolve4',
-//     fn: resolve4
-//   },
-//   {
-//     name: 'resolve6',
-//     fn: resolve6
-//   },
-//   {
-//     name: 'resolve6 -> resolve4',
-//     fn: fallback([resolve6, resolve4])
-//   },
-//   {
-//     name: 'resolve6 -> resolve',
-//     fn: fallback([resolve6, resolve0])
-//   },
-//   {
-//     name: 'resolve6 -> resolve4 -> resolve',
-//     fn: fallback([resolve6, resolve4, resolve0])
-//   },
-//   {
-//     name: 'net.createConnection(0)',
-//     fn: connect0
-//   },
-//   {
-//     name: 'net.createConnection(4)',
-//     fn: connect4
-//   },
-//   {
-//     name: 'net.createConnection(6)',
-//     fn: connect6
-//   },
-//   {
-//     name: 'net.createConnection(6) -> net.createConnection(4)',
-//     fn: fallback([connect6, connect4])
-//   },
-//   {
-//     name: 'net.createConnection(6) -> net.createConnection(0)',
-//     fn: fallback([connect6, connect0])
-//   },
-//   {
-//     name: 'net.createConnection(6) -> net.createConnection(4) -> net.createConnection(0)',
-//     fn: fallback([connect6, connect4, connect0])
-//   },
-//   {
-//     name: 'tls.connect(0)',
-//     fn: tls0
-//   },
-//   {
-//     name: 'tls.connect(4)',
-//     fn: tls4
-//   },
-//   {
-//     name: 'tls.connect(6)',
-//     fn: tls6
-//   },
-//   {
-//     name: 'tls.connect(6) -> tls.connect(4)',
-//     fn: fallback([tls6, tls4])
-//   },
-//   {
-//     name: 'tls.connect(6) -> tls.connect(0)',
-//     fn: fallback([tls6, tls0])
-//   },
-//   {
-//     name: 'tls.connect(6) -> tls.connect(4) -> tls.connect(0)',
-//     fn: fallback([tls6, tls4, tls0])
-//   },
-//   {
-//     name: 'client.connect({ useUnifiedTopology: false, family: 0 })',
-//     promisified: true,
-//     fn: dbOldTopologyFamily0
-//   },
-//   {
-//     name: 'client.connect({ useUnifiedTopology: false, family: 4 })',
-//     promisified: true,
-//     fn: dbOldTopologyFamily4
-//   },
-//   {
-//     name: 'client.connect({ useUnifiedTopology: false, family: 6 })',
-//     promisified: true,
-//     fn: dbOldTopologyFamily6
-//   },
-//   {
-//     name: 'client.connect({ useUnifiedTopology: false })',
-//     promisified: true,
-//     fn: dbOldTopologyFamilyN
-//   },
-//   {
-//     name: 'client.connect({ useUnifiedTopology: true, family: 0 })',
-//     promisified: true,
-//     fn: dbNewTopologyFamily0
-//   },
-//   {
-//     name: 'client.connect({ useUnifiedTopology: true, family: 4 })',
-//     promisified: true,
-//     fn: dbNewTopologyFamily4
-//   },
-//   {
-//     name: 'client.connect({ useUnifiedTopology: true, family: 6 })',
-//     promisified: true,
-//     fn: dbNewTopologyFamily6
-//   },
-//   {
-//     name: 'client.connect({ useUnifiedTopology: true })',
-//     promisified: true,
-//     fn: dbNewTopologyFamilyN
-//   }
+  {
+    name: 'lookup(6) -> lookup(0)',
+    fn: fallback([lookup6, lookup0])
+  },
+  {
+    name: 'lookup(6) -> lookup(4) -> lookup(0)',
+    fn: fallback([lookup6, lookup4, lookup0])
+  },
+  {
+    name: 'resolve',
+    fn: resolve0
+  },
+  {
+    name: 'resolve4',
+    fn: resolve4
+  },
+  {
+    name: 'resolve6',
+    fn: resolve6
+  },
+  {
+    name: 'resolve6 -> resolve4',
+    fn: fallback([resolve6, resolve4])
+  },
+  {
+    name: 'resolve6 -> resolve',
+    fn: fallback([resolve6, resolve0])
+  },
+  {
+    name: 'resolve6 -> resolve4 -> resolve',
+    fn: fallback([resolve6, resolve4, resolve0])
+  },
+  {
+    name: 'net.createConnection(0)',
+    fn: connect0
+  },
+  {
+    name: 'net.createConnection(4)',
+    fn: connect4
+  },
+  {
+    name: 'net.createConnection(6)',
+    fn: connect6
+  },
+  {
+    name: 'net.createConnection(6) -> net.createConnection(4)',
+    fn: fallback([connect6, connect4])
+  },
+  {
+    name: 'net.createConnection(6) -> net.createConnection(0)',
+    fn: fallback([connect6, connect0])
+  },
+  {
+    name: 'net.createConnection(6) -> net.createConnection(4) -> net.createConnection(0)',
+    fn: fallback([connect6, connect4, connect0])
+  },
+  {
+    name: 'tls.connect(0)',
+    fn: tls0
+  },
+  {
+    name: 'tls.connect(4)',
+    fn: tls4
+  },
+  {
+    name: 'tls.connect(6)',
+    fn: tls6
+  },
+  {
+    name: 'tls.connect(6) -> tls.connect(4)',
+    fn: fallback([tls6, tls4])
+  },
+  {
+    name: 'tls.connect(6) -> tls.connect(0)',
+    fn: fallback([tls6, tls0])
+  },
+  {
+    name: 'tls.connect(6) -> tls.connect(4) -> tls.connect(0)',
+    fn: fallback([tls6, tls4, tls0])
+  },
+  {
+    name: 'client.connect({ useUnifiedTopology: false, family: 0 })',
+    promisified: true,
+    fn: dbOldTopologyFamily0
+  },
+  {
+    name: 'client.connect({ useUnifiedTopology: false, family: 4 })',
+    promisified: true,
+    fn: dbOldTopologyFamily4
+  },
+  {
+    name: 'client.connect({ useUnifiedTopology: false, family: 6 })',
+    promisified: true,
+    fn: dbOldTopologyFamily6
+  },
+  {
+    name: 'client.connect({ useUnifiedTopology: false })',
+    promisified: true,
+    fn: dbOldTopologyFamilyN
+  },
+  {
+    name: 'client.connect({ useUnifiedTopology: true, family: 0 })',
+    promisified: true,
+    fn: dbNewTopologyFamily0
+  },
+  {
+    name: 'client.connect({ useUnifiedTopology: true, family: 4 })',
+    promisified: true,
+    fn: dbNewTopologyFamily4
+  },
+  {
+    name: 'client.connect({ useUnifiedTopology: true, family: 6 })',
+    promisified: true,
+    fn: dbNewTopologyFamily6
+  },
+  {
+    name: 'client.connect({ useUnifiedTopology: true })',
+    promisified: true,
+    fn: dbNewTopologyFamilyN
+  }
 ]);
 
 async function run() {
